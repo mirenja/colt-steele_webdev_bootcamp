@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms Demo</title>
-</head>
+</head> 
 <body>
     <h1>Forms Demo</h1>
     <form action="/tacos">
         <p>
             <button type= "button">this does not submit</button><!--this doesnt submit because of the type attribute-->
         <label for= "username">Enter Username</label>
-        <input id= "username" type="text" placeholder="username">
+        <input id= "username" type="text" placeholder="username" name= "username">
         </p>
         <p>
             <label for = "number">enter your phone number</label>
-            <input id ="number" type="number">
+            <input id ="number" type="number" name= "number">
         </p>
         
         <p>
         <label for ="password">password</label>
-        <input id = "password" type="password" placeholder="Please inculde a symbol">
+        <input id = "password" type="password" placeholder="Please inculde a symbol" name= "password">
         </p>
         <p>
-            <input type="color">
+            <input type="color" name= "color">
         </p>
         <!--the deafualt type for the button is submit-->
         <button>submit</button>
