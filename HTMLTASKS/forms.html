@@ -9,8 +9,9 @@
 <body>
     <h1>Forms Demo</h1>
     <form action="/tacos">
-        <p>
+        
             <button type= "button">this does not submit</button><!--this doesnt submit because of the type attribute-->
+        <p>
         <label for= "username">Enter Username</label>
         <input id= "username" type="text" placeholder="username" name= "username">
         </p>
@@ -26,6 +27,11 @@
         <p>
             <input type="color" name= "color">
         </p>
+        <p> <!--used to show number inputs with a range-->
+            <label for ="num">Enter an number</label>
+            <input id = "num" type="number" placeholder="Please enter a number" name="num" min="0" max="1000">
+            </p>
+          
         <!--the deafualt type for the button is submit-->
         <button>submit</button>
 
@@ -35,20 +41,91 @@
     <h1>hijacking google and reddit and youtube</h1>
     <form action="https://www.reddit.com/search">
         
-        <input id= "username" type="text" placeholder="username" name= "q">
+        <input id= "username" type="text" placeholder="search" name= "q">
         <button>Search Reddit</button>
     </form>
     <form action="https://www.google.com/search">
          
-        <input id= "username" type="text" placeholder="username" name= "q">
+        <input id= "username" type="text" placeholder="search" name= "q">
         <button>search google</button>
     </form>
 
     <form action="https://www.youtube.com/results">
-          <label for ="username">youtube</label>    
-        <input id= "username" type="text" placeholder="username" name= "search_query">
+             
+        <input id= "username" type="text" placeholder="search" name= "search_query">
         <button>search youtube</button>
     </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agrre_tos" id="agree" >
+        <label for="agree">I agree to Everything</label>
+        <p>
+        <input type="checkbox" name="agree_marketting" id="marketting" checked >
+        <label for="marketting">I agree to Marketting Emails</label>
+        </p>
+        
+        <!--radio buttons, in a group of buttons only one needs to be selected, for checkboxes in a group all can be selected-->
+       <!-- the buttons are associated using the name attribute, rem the name attribute is also the identifier srver side--> 
+        <p>
+            <h3>Pick a fitting</h3>
+
+            <label for="xs">xs</label>
+            <input type="radio" name="size" id="xs" value="xs" >
+            <label for="small">s</label>
+            <input type="radio" name="size" id="small" value="small">
+            <label for="large" >large</label>
+            <input type="radio" name="size" id="large" value="large">
+        </p>
+        <button>submit</button>
+        <!--select element is a drop down MEnu-->
+        <h3>Menu Sample-preselected steak option</h3>
+        <label for="meal"> Please select an Entree</label>
+        <select id="meal" name="meal">            
+            <option value="Fish">Fish</option>
+            <option value="meat" selected>Steak</option>
+            <option value="veg">Vegeterian</option>
+        </select>
+
+        <h3>Menu Sample filled in dummy option</h3>
+        <label for="meal"> Please select an Entree</label>
+        <select id="meal" name="meal">            
+            <option value="">--Please select an option--</option>
+            <option value="meat">Steak</option>
+            <option value="Fish">Fish</option>
+            <option value="veg">Vegeterian</option>
+        </select>
+
+        <h3>Menu Sample-noting is set</h3>
+        <label for="meal"> Please select an Entree</label>
+        <select id="meal" name="meal">            
+            <option value="Fish">Fish</option>
+            <option value=>"meat">Steak</option>
+            <option value="veg">Vegeterian</option>
+        </select>
+        <!--range for slider-->
+        <p>
+            <!--give it step value how many steps to increament per instance-->
+            <label for="cheese">Amount of cheese:</label>
+            <input type="range" id="cheese" name="cheese" min="0" max="100" step="5">
+
+            <!--give it an initial value-->
+            <label for="mustard">Amount of Mustard:</label>
+            <input type="range" id="mustard" name="mustard" min="0" max="100" value="75">
+
+            <!--give it step value how many steps to increament per instance-->
+            <label for="mayo">Amount of Mayo:</label>
+            <input type="range" id="mayo" name="mayo" min="0" max="100">
+        </p>
+        <p>
+            <label for ="requests">Leave us a comment!</label>
+            <br> <!--introduce a break so that the text area is below the label-->
+            <textarea id="requests" rows="10" cols="40" name="requets" placeholder="leave us a comment"></textarea>
+        </p>
+        <button>Submit</button>
+
+    </form>
+        
 
 
     
