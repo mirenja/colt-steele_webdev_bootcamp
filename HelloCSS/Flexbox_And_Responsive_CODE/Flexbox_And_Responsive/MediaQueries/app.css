@@ -8,22 +8,39 @@ h1 {
 }
 nav {
     font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
 
 }
+ul {
+
+    flex:1; /*flex grow so that it occupies some of the remaining extra space*/
+    max-width:50%;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+
 
 ul,li {
-    display: inline;
+
+    list-style:none;
     margin: 0;
     padding: 0;
 }
+   
 /* mdeia (orientation:landscape){
     background-color:magenta;
 }
 */
 
-@media (max-width:768px){ /*768 and below*/
+@media (max-width: 768px){ /*768 and below*/
     h1{
-        font-size:4em
+        font-size:4em;
+    }
+    nav, nav ul {
+        flex-direction:column;
+        align-items: center;
     }
 }
 
